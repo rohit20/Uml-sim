@@ -1,0 +1,145 @@
+lab 1
+
+1.1: Interpret Use Case Diagram 
+
+1. Name the actors.
+
+   Cur_ICENTURIAN,account holder,Sac_ICENTURIAN,Email System
+
+2. Why is the Email System considered as an actor for this system?
+
+   Because it is interacting with creating destination account
+
+3. How would the above diagram be different if the data sources were designed as
+   part of the application?
+
+   It would be activity diagram if the data sources were desgined as part of the application.
+
+4. Name the use cases that can be invoked by Account Holder.
+
+   Transfer funds,Request Address Change,View account details,view satatements ,view account summary,login,activate destination account,create destination account
+
+5. Which use case has extension points? What are the extended use cases?
+
+   Account holder->create destination account->transfer funds;Account holder_>activate destination account->transfer funds
+
+6. Does this online system allow the use to pay insurance premiums? If yes, which is the use case? If no, how can the diagram be changed to include that? 
+
+   No. We can change the diagram by following extended use case:account holder->insurance premium->transfer funds
+
+/******************************************************************************/
+
+Lab 2. Dynamic View Diagrams – Activity Diagrams 
+
+7. Refer 1.1. Which use case do you think this activity diagram is describing?
+
+   Login
+
+8. Name the swimlanes that you find in this diagram.
+
+   User,System
+
+/********************************************************************************/
+
+Lab 3. Dynamic View Diagrams – Sequence Diagrams 
+ 
+3.1. 
+
+B. Study the sequence diagram given below and answer the following questions.
+
+1. The operation getAvailableReports() belongs to the class FinancialAnalyst.
+   TRUE /FALSE.
+
+   TRUE
+
+2. What methods would be implemented by the class ReportingSystem ?
+
+   getSecurityClearnce(userId),determineAvailableReports()
+
+3. What is the return value of the method getAvailableReports ?
+
+   AvailableReport
+
+4. Who is responsible for calling the operation determineAvailableReports() ?
+
+   ReportingSystem class
+
+/**************************************************************************************/
+
+lab 4:
+
+4.1: Interpret State Chart Diagram 
+
+14. What are the start and end states indicated on this diagram.
+
+    Initial STate,End State
+
+15. Are there any states depicting “State-Sub state” relationships? Which are these
+    states?
+
+    Overdawn,Frozen
+
+16. Which states depicts entry action, exit action and internal activity? What are
+    these actions/activities?
+
+    Closed State,depicts entry action,exit action and internal activity.
+    These are State actions & self-transition
+
+17. Under what conditions does the Account go into Suspended state?
+
+    When Balance<1000 and when there is fraud.
+/***************************************************************************************/
+
+Lab 5. Static View Diagrams – Class Diagrams 
+
+5.1: Interpret Class Diagram 
+
+18. Name all the classes that are part of this diagram.
+
+   MainOptionForm,TransferFundsForm,TransferFundsController,ICurAcctBankSystem,
+   Account,Customer,TransferDetails,SavingAccount,CurrentAccount
+
+19. Name the attributes defined for the “Customer” class.
+
+   customerId:String,firstName:String,LastName:String
+
+20. Name the operation defined for the “TransferFundsController” class.
+
+   calculateTransactionFee(),executeTransfer(),getCustomer()
+
+21. The following relationships are depicted amongst which classes?
+
+   i. Generalization:SavingsAccount,CurrentAccount
+   ii. Dependency:TransferDetails
+   iii. Association22.:TransferFundsForm,TransferFundsController And Account,Customer
+
+22. Can a customer hold multiple accounts in the bank? Are joint accounts permitted
+as per this diagram?
+
+   Yes. & No
+23. What needs to change in the above diagram if we wanted to depict the
+relationship that “Customer has Accounts”?
+
+   Association must be swiped , it would be customer to Account
+/****************************************************************************/
+Lab 6. General and Extension Mechanisms 
+
+6.1: Identify approaches to extend UML 
+
+24. Name the extension mechanisms you find in the Use Case Diagram and
+    Deployment Diagram.
+
+    Stereotypes,constraints,Tagged value
+
+25. Name some stereotypes that you find on the Class Diagram.
+
+    <<boundary>>,<<entity>>,<<control>>,<<interface>>
+
+26. Name some adornments that you find on the Class Diagram.
+
+    accountholder
+
+27. Do you find any Notes being depicted on any of the diagrams? If yes, in which
+    diagrams?
+
+    No
